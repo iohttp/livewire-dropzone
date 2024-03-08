@@ -1,5 +1,5 @@
 {
-    "name": "iohttp/livewire-dropzone",
+    "name": "laravio/livewire-dropzone",
     "description": "A dropzone component for Livewire enables easy drag-and-drop file uploads.",
     "keywords": [
         "livewire",
