@@ -155,6 +155,8 @@
                 removeUpload(tmpFilename) {
                     // Dispatch an event to remove the temporarily uploaded file
                     _this.dispatch('{{ $uuid }}:fileRemoved', { tmpFilename })
+                    // Trigger global event without component uuid
+                    _this.dispatch('dropzone:fileRemoved', { tmpFilename })
                 },
             });
         })

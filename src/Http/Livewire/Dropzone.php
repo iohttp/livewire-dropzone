@@ -105,8 +105,9 @@ class Dropzone extends Component
         $this->files = array_filter($this->files, function ($file) use ($tmpFilename) {
             $isNotTmpFilename = $file['tmpFilename'] !== $tmpFilename;
 
+            // mute errors if file can't be removed (for example s3 storage, etc)
             if (! $isNotTmpFilename) {
-                unlink($file['path']);
+                @unlink($file['path']);
             }
 
             return $isNotTmpFilename;
